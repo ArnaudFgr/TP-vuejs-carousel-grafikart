@@ -1,15 +1,12 @@
 <template>
   <div id="app">
   <carousel>
-    <carousel-slide>
-      <div style="position:absolute; left:0; right:0; text-align:center; top:50%; color: #FFF; font-size:16px;">Hello</div>
-      <img src="../images/mario-1.png" style="width: 100%">
-    </carousel-slide>
-    <carousel-slide>
-      <div style="position:absolute; left:0; right:0; text-align:center; top:50%; color: #FFF; font-size:16px;">ByeBye</div>
-      <img src="../images/mario-2.png" style="width: 100%">
+    <carousel-slide v-for="n in slides" :key="n.id">
+      <div style="position:absolute; left:0; right:0; text-align:center; top:50%; color: #FFF; font-size:16px;">Hello slide {{ n }}</div>
+      <img :src="require('../images/mario-' + n + '.png')" style="width: 100%">
     </carousel-slide>
   </carousel>
+  <button @click="addSlide">Ajouter un Slide</button>
   </div>
 </template>
 
@@ -19,9 +16,19 @@ import CarouselSlide from './components/carousel/CarouselSlide'
 
 export default {
   name: 'App',
+  data () {
+    return {
+      slides: 2
+    }
+  },
   components: {
     Carousel,
     CarouselSlide
+  },
+  methods:{
+    addSlide(){
+      //this.slides++
+    }
   }
 }
 </script>

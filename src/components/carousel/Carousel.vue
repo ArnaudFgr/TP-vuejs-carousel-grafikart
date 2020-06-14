@@ -62,6 +62,7 @@ export default {
   }
   .carousel{
     position: relative;
+    overflow: hidden;
   }
   .carousel__nav{
     position: absolute;
