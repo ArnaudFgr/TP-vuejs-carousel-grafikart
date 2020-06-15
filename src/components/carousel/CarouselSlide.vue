@@ -8,11 +8,10 @@
 
 <script>
 export default {
-  data () {
-    return {
-      index: 0
-    }
+  props: {
+    index: { type: Number, default: 0 }
   },
+
   computed: {
     transition (){
       if(this.$parent.direction)

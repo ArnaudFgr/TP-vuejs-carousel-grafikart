@@ -15,15 +15,16 @@ export default {
     return{
       index: 0,
       slides: [],
-      direction: null
+      direction: 'right'
     }
   },
 
-  mounted (){
-    this.slides = this.$children
-    this.slides.forEach((slide, i) => {
-      slide.index = i
-    })
+  watch:{
+    slides(slides){
+      if(this.index >= this.slidesCount){
+        this.index = this.slidesCount - 1
+      }
+    }
   },
 
   computed: {
@@ -49,8 +50,11 @@ export default {
       this.direction = index > this.index ? 'right' : 'left'
       this.index = index
     }
+  },
 
-  }
+  mounted (){
+    this.slides = this.$children
+  },
 }
 </script>
 

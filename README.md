@@ -2,6 +2,8 @@
 
 > A Vue.js project
 
+<img src="../images/slider.png"></src>
+
 ## Build Setup
 
 ``` bash
