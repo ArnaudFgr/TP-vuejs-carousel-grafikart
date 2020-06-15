@@ -1,8 +1,9 @@
 # tp2-grafikart
 
 > A Vue.js project
+<a href="https://www.grafikart.fr/tutoriels/tp-carousel-819">TP - Carousel Vue.js</a>
 
-<img src="../images/slider.png"></src>
+<img src="images/slider.png" alt="result"></src>
 
 ## Build Setup
 
